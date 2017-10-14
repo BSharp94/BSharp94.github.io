@@ -1,0 +1,11 @@
+{
+  "name": "BSharp94.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:BSharp94/BSharp94.github.io.git",
+  "author": "BSharp94 <briansharp1994@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^3.7.1"
+  }
+}
