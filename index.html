@@ -10,83 +10,147 @@
     
 
     <!-- Vue JS CDV -->
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script> 
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script>  -->
   
     <!-- Main JS Code -->
     <script src="script.js"></script>
 
+    <!-- Main CSS Code -->
+    <link rel="stylesheet" href="./style.css" />
+
   </head>
   <body>
     <div id="app">
-
-      <!-- Navigation -->
+      
+      <!-- Navigation Bar -->
       <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="#">Brian Sharp</a>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link" href="#">About</a>
-            <a class="nav-item nav-link" href="#">Skills</a>
-            <a class="nav-item nav-link" href="#">Contact</a>
-          </div>
+        <a class="navbar-brand">Brian Sharp</a>
+
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Bio</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="#">Experience</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="#">Readings</a>
+            </li>
+                  
+          </ul>
+
         </div>
       </nav>
+      <!-- End Navigation Bar -->
 
-      <!-- About Section -->
-      <div class="about-section">
-        <h3 id="about-me-title">About Me</h3>
-        <p>Here is a little about me....</p>        
+            <!-- AboutME -->
+            <div class="flatpanel container" id="aboutme">
+              <!-- image -->
+              <div class="row">
+                <div class="col-md-6"></div>
+                <!-- <img class="img-fluid col-md-6 col-xs-12" id="profile-img" src="./content/profile_picture.jpg" /> -->
+
+                <!-- text box -->
+                <div class="profile-text col-12  col-xs-12">
+                  <span id="aboutMeText"></span>
+                  <span class="cursor-blink">|</span>
+                  </span>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Bio -->
+            <div id="bio">
+              <div class="container">
+                <div class="card">
+                  <h1>Bio</h1>
+                  <ul>
+                    <li>BS/MS in Computer Science</li>
+                    <li>Experience in Data Science and Machine Learning</li>
+                    <li>2 years experience as a Software Engineer</li>
+                    <li></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Experience -->
+          <div id="Experience">
+            <div class="container">
+              <h1 class="row">Experience</h1>
+              <ul class="card-slider row">
+                <li class="card col-md-2 col-sm-8">
+                 
+                  <img class="card-img-top" href="./content/c-code.jpeg" >
+                  
+                  <div class="card-block">
+                    <h4 class="card-title">C / Java</h4>
+                  </div>
+                
+                </li>
+                <span class="card-spacer col-md-1"></span>
+
+                <li class="card col-md-2 col-sm-8">Python</li>
+                <span class="card-spacer col-md-1 "></span>
+
+                <li class="card col-md-2 col-sm-8">Javascript / Node</li>
+                <span class="card-spacer col-md-1 "></span>
+
+                <li class="card col-md-2 col-sm-8">C# Asp.Net</li>
+                <span class="card-spacer col-md-1 "></span>
+
+              </ul>
+            </div>
+          </div>
+
+
+              
+        </div>
       </div>
-  
-      
-      <!-- Skills Section -->
-      <div class="skills-section">
-        <h3>Skills</h3>
-        <ul class="skillss-section-list">
-          <li v-for="lang in languages">
-            {{ lang }}
-          </li>
-        </ul>
-      </div> 
 
-      <!-- Contact Section -->
-      <div class="contact-section">
-        <h3>Contact</h3>
-        <!-- Contact Form -->
-        <form class="contact-form">
-
-          <div class="form-group">
-            <label for="contact-form-name">Your Name</label>
-            <input type="text" class="form-control" id="contact-form-name" placeholder="Enter Your Name" />
-          </div>
-
-          <div class="form-group">
-            <label for="contact-form-email">Email</label>
-            <input type="text" class="form-control" id="contact-form-email" placeholder="Enter you Email" />
-          </div>
-
-          <div class="form-group">
-            <label for="contact-form-category">Category</label>
-            <select id="contact-form-category" class="form-control">
-              <option v-for="category in categories">
-                {{ category }}
-              </option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="contact-form-message">Message</label>
-            <textarea id="contact-form-message" class="form-control"></textarea>
-          </div>
-
-          <div class="form-group">
-            <button id="contact-form-clear" class="btn btn-secondary">Clear Form</button>
-            <button id="contact-form-submit" type="submit" class="btn btn-primary">Submit</button>
-          </div>
-        </form>
-      </div>
     </div>
+    <script>
+      var aboutMeData = "Hi. My name is Brian Sharp and I am a Software engineer.".split(/(\s+)/).reverse();
+      var aboutMeText = $("#aboutMeText");
+
+      window.onload = function (){
+        
+        
+        var updateAboutMe = window.setInterval(function (){
+            
+          
+          let newText = aboutMeText.text() + aboutMeData.pop();
+          aboutMeText.text(newText);
+          
+          
+          if( aboutMeData.length < 1){
+            window.clearInterval(updateAboutMe)
+          }
+          
+        }, 200)
+        
+
+        var cursorShowing = true;
+        window.setInterval(function (){
+          cursorShowing = !cursorShowing;
+          if (cursorShowing) {
+            $(".cursor-blink").show();
+          }
+          else {
+            $(".cursor-blink").hide();
+          }
+        },250);
+        };
+    </script>
   </body>
 </html>
