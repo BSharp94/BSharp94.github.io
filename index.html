@@ -1,17 +1,19 @@
 <html>
   <head>
     <title>Brian Sharp</title>
-
     <!-- JQuery and Bootstrap CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    
 
     <!-- Vue JS CDV -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script>  -->
-  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
+
+    <!-- font awesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+
     <!-- Main JS Code -->
     <script src="script.js"></script>
 
@@ -53,104 +55,64 @@
 
             <!-- AboutME -->
             <div class="flatpanel container" id="aboutme">
-              <!-- image -->
               <div class="row">
-                <div class="col-md-6"></div>
-                <!-- <img class="img-fluid col-md-6 col-xs-12" id="profile-img" src="./content/profile_picture.jpg" /> -->
-
                 <!-- text box -->
                 <div class="profile-text col-12  col-xs-12">
                   <span id="aboutMeText"></span>
                   <span class="cursor-blink">|</span>
                   </span>
                 </div>
-
               </div>
+
+              <div id="links" class="row">  
+                <a href="https://github.com/BSharp94/" class="card-link fa fa-github"></a>
+                <a href="https://www.linkedin.com/in/brian-sharp-b79a06a0/#" class="card-link fa fa-linkedin"></a>
+              </div>
+
             </div>
 
             <!-- Bio -->
             <div id="bio">
               <div class="container">
                 <div class="card">
-                  <h1>Bio</h1>
-                  <ul>
-                    <li>BS/MS in Computer Science</li>
-                    <li>Experience in Data Science and Machine Learning</li>
-                    <li>2 years experience as a Software Engineer</li>
-                    <li></li>
-                  </ul>
+                  <h1 class="card-title">Bio</h1>
+                  
+                  <div class="card-block">
+                    <span>{{ bioText }}</span>
+                  </div>
+                  
                 </div>
               </div>
             </div>
-          </div>
-          
-          <!-- Experience -->
-          <div id="Experience">
-            <div class="container">
-              <h1 class="row">Experience</h1>
-              <ul class="card-slider row">
-                <li class="card col-md-2 col-sm-8">
-                 
-                  <img class="card-img-top" href="./content/c-code.jpeg" >
-                  
-                  <div class="card-block">
-                    <h4 class="card-title">C / Java</h4>
-                  </div>
+            
+            <!-- Experience -->
+            <div id="Experience">
+              <div class="container">
+                <h1 >Experience</h1>
                 
-                </li>
-                <span class="card-spacer col-md-1"></span>
+                <ul class="row">
+                  <li v-for="exp in experiences" class="col-sm col-xs-6">
+                    <div class="card ovf-hidden">
 
-                <li class="card col-md-2 col-sm-8">Python</li>
-                <span class="card-spacer col-md-1 "></span>
+                      <div class="view overlay hm-white-slight">
+                        <img class="img-fluid" src="{{ exp.src }}">
+                      </div>
 
-                <li class="card col-md-2 col-sm-8">Javascript / Node</li>
-                <span class="card-spacer col-md-1 "></span>
+                      <div class="card-body">
+                          <h4 class="card-title">{{ exp.title }}</h4>
+                          <hr>
+                          <p class="card-text">
+                            During college, my primary languages were C and Java. 
+                          </p>
+                          <a class="link-text"><h5>Read more <i class="fa fa-chevron-right"></i></h5></a>
+                        </div>
+                        
+                      </div>
+                  </li>
+                </ul>
 
-                <li class="card col-md-2 col-sm-8">C# Asp.Net</li>
-                <span class="card-spacer col-md-1 "></span>
-
-              </ul>
+              </div>
             </div>
           </div>
-
-
-              
-        </div>
-      </div>
-
-    </div>
-    <script>
-      var aboutMeData = "Hi. My name is Brian Sharp and I am a Software engineer.".split(/(\s+)/).reverse();
-      var aboutMeText = $("#aboutMeText");
-
-      window.onload = function (){
-        
-        
-        var updateAboutMe = window.setInterval(function (){
-            
-          
-          let newText = aboutMeText.text() + aboutMeData.pop();
-          aboutMeText.text(newText);
-          
-          
-          if( aboutMeData.length < 1){
-            window.clearInterval(updateAboutMe)
-          }
-          
-        }, 200)
-        
-
-        var cursorShowing = true;
-        window.setInterval(function (){
-          cursorShowing = !cursorShowing;
-          if (cursorShowing) {
-            $(".cursor-blink").show();
-          }
-          else {
-            $(".cursor-blink").hide();
-          }
-        },250);
-        };
-    </script>
   </body>
 </html>

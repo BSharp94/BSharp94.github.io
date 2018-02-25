@@ -1,23 +1,20 @@
 .navbar {
     background-color: white;
 }
-
+.navbar-brand,
+.navbar-nav li a {
+  height: 76px;
+  line-height: 76px;
+  padding-top: 0;
+}
 
 .profile-text {
     font-size: 36px;    
     margin-top: 50px;
 }
 
-#profile-img {
-    width: 300px;
-    height: 500px;
-    overflow: hidden;
-
-    padding: 30px;
-}
-
 #aboutme {
-    height: 85%;
+    height: 45%;
     padding-top: 80px;
     margin-bottom: 40px;
 }
@@ -28,40 +25,36 @@
 }
 
 #bio {
-    background: linear-gradient(45deg, rgb(82, 56, 146) 12%, transparent 0, transparent 88%, rgb(82, 56, 146) 0),
-    linear-gradient(135deg, transparent 37%, rgb(63, 44, 112) 0, rgb(63, 44, 112) 63%, transparent 0),
-    linear-gradient(45deg, transparent 37%, rgb(63, 44, 112) 0, rgb(63, 44, 112) 63%, transparent 0) rgb(63, 44, 112);
-    background-size: 25px 25px;background-size: 20px 20px;
-    color: rgb(63, 44, 112);
     width:100%;
     margin: 0;
-    padding: 120px;
+}
+#bio .card{
+    border-radius: 0px !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+#bio a {
+    color:black;
+    font-size: 64px;
+    padding: 0px 40px;
 }
 
-#bio h1{ 
-    font-size: 72px;
-    padding:  20px 100px;    
+
+
+
+#Experience h1{
+    text-align: left;
+    padding: 100px 60px; 
 }
-#bio ul{
-    list-style: none;
-    font-size: 28px;
-    padding: 20px 100px;
+#Experience ul { list-style: none;  }
+#Experience .card {
     
-}
-#bio li {
-    width: 100%;
+    border-radius: 0px !important;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;   
 }
 
-#Experience {
-    background-color: rgb(55, 55, 78);
-    color: #ABABAB;
-}
-#Experience h1 {
-    padding-top: 40px;
-}
-#Experience ul {
-    padding: 80px;
-}
-#Experience li {
-    margin-top: 8px;
+#Experience .card:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
 }
