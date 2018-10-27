@@ -25,24 +25,5 @@ window.onload = () => {
       $(".cursor-blink").hide();
     }
   },250);
-  
-
-
-
-  var vm = new Vue({
-    el: '#app',
-    data: {
-      languages: ['C', 'Java', 'Javascript', 'Python'],
-      categories: ['Hiring', 'General Knowledge'],
-      bioText: "Here is text about me bio text stuff",
-      experiences: [
-        { src: "./content/c_code.jpg", title: "C / Java", text: "During college, my primary languages were C and Java."},
-        { src: "./content/c_code.jpg", title: "Python", text: "During college, my primary languages were C and Java."},
-        { src: "./content/c_code.jpg", title: "Javascript", text: "During college, my primary languages were C and Java."},
-        { src: "./content/c_code.jpg", title: "C# ASP.net", text: "During college, my primary languages were C and Java."},
-
-      ]
-    }
-  });
 
 }
