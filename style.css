@@ -34,3 +34,31 @@
     list-style: none;
 }
 
+#howCanIHelp .row h3{
+    text-align:center;
+    width: 100%;
+    margin: 40px 0px 10px 0px;
+}
+
+#howCanIHelp .row span{
+    text-align:center;
+    width: 100%;
+}
+
+#howCanIHelp_Title2 {
+    margin-bottom: 10px;
+}
+
+#contact {
+    background-color: #25476a;
+    color: white;
+}
+#contact-header {
+    text-align: center;
+    width: 100%;
+    margin: 72px 0px 32px 0px;
+}
+#contact #contact-form {
+    width: 50%;
+    margin: 20px auto;
+}
