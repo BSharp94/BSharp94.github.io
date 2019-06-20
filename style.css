@@ -62,3 +62,12 @@
     width: 50%;
     margin: 20px auto;
 }
+#contact-form-submitted {
+    display: none;
+}
+
+#contact-form-submitted {
+    text-align: center;
+    width: 100%;
+    margin: 30px 0px 60px 0px;
+}
