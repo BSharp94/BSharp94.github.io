@@ -1,0 +1,19 @@
+
+
+.timeline_item__divider {
+    border-left: 1px solid black;
+}
+
+.timeline_item__dot {
+    width: 10px;
+    height: 10px;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    left: -5px;
+    top: 5px;
+}
+
+.timeline_item__summary {
+    margin-bottom: 30px;
+}
