@@ -6,7 +6,7 @@
  */
 
 import React from "react"
-import PropTypes from "prop-types"
+import PropTypes from "prop-types"  
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <div>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
@@ -32,13 +32,13 @@ const Layout = ({ children }) => {
           maxWidth: 960,
           padding: `0 1.0875rem 1.45rem`,
         }}
-      >
+        >
         <main>{children}</main>
         <footer>
           © {new Date().getFullYear()}, by Brian Sharp
         </footer>
       </div>
-    </>
+    </div>
   )
 }
 
