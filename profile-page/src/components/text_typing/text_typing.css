@@ -1,0 +1,12 @@
+.text_typing_panel {
+    padding: 126px 0px 20px 0px;
+    font-size: 2.5em;
+    min-height: 200px;
+}
+
+@media (max-width : 720px) {
+    .text_typing_panel {
+        min-height: 75vh;
+        padding: 100px 20px 0px 20px;
+    }
+}
