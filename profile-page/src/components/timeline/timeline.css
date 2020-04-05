@@ -1,0 +1,32 @@
+
+
+.timeline_item__divider {
+    border-left: 1px solid black;
+}
+
+.timeline_item__dot {
+    width: 10px;
+    height: 10px;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    left: -5px;
+    top: 0px;
+}
+
+.timeline_item__summary {
+    margin-bottom: 30px;
+}
+
+.timeline_item__technologies ul{
+    margin-left: 0px;
+    padding: 18px 0px;
+}
+
+.timeline_item__technologies li{
+    display: inline;
+    list-style-type: none;
+    margin: 0px 8px;
+    padding: 4px 8px;
+    border: 1px solid black;
+}

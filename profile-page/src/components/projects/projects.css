@@ -1,0 +1,14 @@
+
+.project_summary__panel {
+    margin-left: 24px;
+    text-align: center;
+}
+
+.project_summary__title {
+    margin: 30px;
+}
+
+.project_summary__image {
+    margin: 0px auto;
+    display: block;
+}
