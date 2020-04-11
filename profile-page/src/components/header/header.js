@@ -4,6 +4,7 @@ import {
   Nav,
   Navbar,
 } from 'react-bootstrap'
+import './header.css'
 
 const Header = ({ siteTitle }) => (
   <Navbar expand="lg">

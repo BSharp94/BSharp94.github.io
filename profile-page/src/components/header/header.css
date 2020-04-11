@@ -1,0 +1,8 @@
+.navbar {
+    background: rgb(84,99,250);
+    background: linear-gradient(90deg, rgba(84,99,250,1) 0%, rgba(84,188,252,1) 65%);
+}
+.navbar-brand {
+    color: white !important;
+    font-weight: bold;
+}

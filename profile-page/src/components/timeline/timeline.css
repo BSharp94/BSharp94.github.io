@@ -1,13 +1,13 @@
 
 
 .timeline_item__divider {
-    border-left: 1px solid black;
+    border-left: 1px solid #999;
 }
 
 .timeline_item__dot {
     width: 10px;
     height: 10px;
-    background: black;
+    background: #999;
     border-radius: 50%;
     position: absolute;
     left: -5px;
@@ -28,5 +28,5 @@
     list-style-type: none;
     margin: 0px 8px;
     padding: 4px 8px;
-    border: 1px solid black;
+    border: 1px solid white;
 }
