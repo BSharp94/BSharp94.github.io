@@ -1,0 +1,14 @@
+.about_me_summary__panel {
+    margin: 56px 32px 198px 32px;
+}
+.about_me_summary__text {
+    margin: 8px 0px;
+    color: #CCC;
+}
+.about_me_summary__text b{
+    color:  #EFEFEF ;
+}
+.about_me_summary__icon_links a{
+    margin-top: 18px;
+    margin-right: 12px;
+}

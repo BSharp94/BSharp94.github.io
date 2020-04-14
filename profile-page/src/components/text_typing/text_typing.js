@@ -45,7 +45,7 @@ class TextTyping extends React.Component {
         this.cursorBlinkInterval = setInterval(this.cursorBlink.bind(this), 300)
 
         // Create Text animation 
-        this.textUpdateAnimation = setInterval(this.textTyping.bind(this), 200)
+        this.textUpdateAnimation = setInterval(this.textTyping.bind(this), 100)
     }    
 
     componentWillUnmount() {
