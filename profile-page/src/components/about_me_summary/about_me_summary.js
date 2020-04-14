@@ -11,28 +11,38 @@ class AboutMeSummary extends React.Component {
 
     constructor(props) {
         super()
+        this.state = {
+            showName: ""
+        }
     }
 
+    componentDidMount() {
+        setTimeout(() => {this.setState({showName: "show"})}, 300)
+
+    }
 
     render() {
         return (
-            <div className = "about_me_summary__panel">
-                <p className = "about_me_summary__text">
-                    I am a full-stack developer with expertise in data analytics and machine learning.
-                </p>                
-                <p className = "about_me_summary__text">
-                    I specialize in creating responsive data driven web-applications. 
-                </p>
-                <div>
+            <div className = {"about_me_summary__panel " + this.state.showName}>
+                <div className = {this.state.showName || ""}>
+
                     <p className = "about_me_summary__text">
-                    <b>Lets Chat!</b> Email me at <b>briansharpdevelopement@gmail.com</b> 
+                        I am a full-stack developer with expertise in data analytics and machine learning.
+                    </p>                
+                    <p className = "about_me_summary__text">
+                        I specialize in creating responsive data driven web-applications. 
                     </p>
-                </div>
-                &nbsp;
-                <div className = "about_me_summary__icon_links">
-                    
-                    <a href = "https://github.com/BSharp94"><FaGithub size = {30}  color = "#CCC"/></a>
-                    <a href = "https://www.linkedin.com/in/brian-sharp-b79a06a0/"><FaLinkedin size = {30} color = "#CCC"/></a>
+                    <div>
+                        <p className = "about_me_summary__text">
+                        <b>Lets Chat!</b> Email me at <b>briansharpdevelopement@gmail.com</b> 
+                        </p>
+                    </div>
+                    &nbsp;
+                    <div className = "about_me_summary__icon_links">
+                        
+                        <a href = "https://github.com/BSharp94"><FaGithub size = {30}  color = "#CCC"/></a>
+                        <a href = "https://www.linkedin.com/in/brian-sharp-b79a06a0/"><FaLinkedin size = {30} color = "#CCC"/></a>
+                    </div>
                 </div>
             </div>
         )
