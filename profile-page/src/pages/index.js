@@ -11,7 +11,6 @@ const IndexPage = () => (
   <Layout>
     
     <TextTyping text = "Hi. ~~ ~~ ~~ My name is Brian Sharp. ~~ ~~ ~~ :)" />
-    <HorizontalBar />
     
     <AboutMeSummary />
 

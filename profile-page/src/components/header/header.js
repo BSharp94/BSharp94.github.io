@@ -16,6 +16,7 @@ const Header = ({ siteTitle }) => (
         <Nav.Link href="#workExperience">Experience</Nav.Link>
       </Nav>
     </Navbar.Collapse>
+
   </Navbar>
 )
 

@@ -25,6 +25,10 @@ const Layout = ({ children }) => {
 
   return (
     <div>
+      <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+      <div className = "overlay-layer-1"></div>
+      <div className = "overlay-layer-2"></div>
+      <div className = "overlay-layer-3"></div>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{

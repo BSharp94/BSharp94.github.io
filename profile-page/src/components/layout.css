@@ -4,11 +4,11 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: sans-serif;
+  font-family: "Open Sans";
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #3a3a3a;
+  background-color: #2C3E50;;
   color: white !important;
 }
 article,
@@ -623,4 +623,39 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+
+.overlay-layer-1 {
+  position: absolute;
+  top: -400px;
+  right: -40vw;
+  width: 150vw;
+  height: 400px;
+  background-color: #34495E;
+  z-index: 100;
+  transform: rotate(41deg);
+}
+
+.overlay-layer-2 {
+  position: absolute;
+  top: -400px;
+  right: -40vw;
+  width: 150vw;
+  height: 400px;
+  background-color: #2980B9;
+  z-index: 101;
+  transform: rotate(35deg);
+}
+
+
+.overlay-layer-3{
+  position: absolute;
+  top: -400px;
+  right: -40vw;
+  width: 150vw;
+  height: 400px;
+  background-color: #3498DB;
+  z-index: 102;
+  transform: rotate(30deg);
 }
