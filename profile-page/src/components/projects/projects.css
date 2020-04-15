@@ -1,0 +1,16 @@
+.project__panel {
+    margin-bottom: 186px;
+}
+.project_item__panel {
+    padding: 10px;
+    color: white;
+}
+
+.project_item__content {
+    background-color: #2b2b2b;
+    height: 300px;
+}
+
+.project_item__content:hover {
+    background-color: #222;
+}

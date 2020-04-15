@@ -5,7 +5,7 @@ import TextTyping from '../components/text_typing/text_typing'
 import Timeline from '../components/timeline/timeline'
 import AboutMeSummary from '../components/about_me_summary/about_me_summary'
 import HorizontalBar from '../components/horizontal_bar/horizontal_bar'
-
+import Projects from '../components/projects/projects'
 
 const IndexPage = () => (
   <Layout>
@@ -14,6 +14,10 @@ const IndexPage = () => (
     <HorizontalBar />
     
     <AboutMeSummary />
+
+    <div id = "portfolio" >
+      <Projects />
+    </div>
 
     <div id = "workExperience">
       <Timeline title = "Work Experience" />
