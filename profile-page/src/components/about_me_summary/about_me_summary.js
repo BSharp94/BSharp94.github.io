@@ -37,11 +37,10 @@ class AboutMeSummary extends React.Component {
                         <b>Lets Chat!</b> Email me at <b>briansharpdevelopement@gmail.com</b> 
                         </p>
                     </div>
-                    &nbsp;
-                    <div className = "about_me_summary__icon_links">
-                        
-                        <a href = "https://github.com/BSharp94"><FaGithub size = {30}  color = "#CCC"/></a>
-                        <a href = "https://www.linkedin.com/in/brian-sharp-b79a06a0/"><FaLinkedin size = {30} color = "#CCC"/></a>
+                    <div>
+                        <p className = "about_me_summary__text">
+                        Or <a href = "#">contact me below</a> 
+                        </p>
                     </div>
                 </div>
             </div>

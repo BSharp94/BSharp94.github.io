@@ -36,10 +36,12 @@ class Projects extends React.Component {
 
         return (
             <div className = "project__panel">
-                <h3>Portfolio</h3>
-                <div class="container">
-                    <div class="row">
-                        {project_items}
+                <div className = "project__content">
+                    <h3>Projects</h3>
+                    <div className="container">
+                        <div className="row">
+                            {project_items}
+                        </div>
                     </div>
                 </div>
             </div>
