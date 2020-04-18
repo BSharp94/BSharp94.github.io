@@ -21,10 +21,13 @@ class ContactMe extends React.Component {
 
     submitHandler = event => {
         event.preventDefault()
-        event.target.className += " was-validated";
 
         if (this.checkValidFormState()) {
             // submit form
+        } else {
+            event.target.className += " was-validated";
+
+            // Send Email
         }
     }
 
@@ -40,10 +43,6 @@ class ContactMe extends React.Component {
         var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
         return emailPattern.test(emailStr); 
     }
-
-    changeHandler = event => {
-        this.setState({ [event.target.name]: { value: event.target.value, valid: !!event.target.value } });
-    };
 
     handleFormUpdate(event) {
         let updatedState = this.state

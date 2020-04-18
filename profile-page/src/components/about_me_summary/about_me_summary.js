@@ -39,7 +39,7 @@ class AboutMeSummary extends React.Component {
                     </div>
                     <div>
                         <p className = "about_me_summary__text">
-                        Or <a href = "#">contact me below</a> 
+                        Or <a href = "#contact-me">contact me below</a> 
                         </p>
                     </div>
                 </div>

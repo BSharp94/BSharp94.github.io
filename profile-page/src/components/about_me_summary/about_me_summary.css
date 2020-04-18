@@ -20,3 +20,11 @@
     margin-right: 12px;
     color: #3498DB;
 } 
+
+
+@media (max-width : 720px) {
+    .about_me_summary__panel {
+        margin: 0 auto;
+        max-width: 400px;
+    }    
+}

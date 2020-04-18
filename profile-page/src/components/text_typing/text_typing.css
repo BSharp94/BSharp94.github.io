@@ -11,6 +11,8 @@
 @media (max-width : 720px) {
     .text_typing_panel {
         min-height: 32vh;
-        padding: 100px 20px 0px 20px;
+        padding: 100px 20px 0px 0px;
+        margin: 0px auto;
+        max-width: 400px;
     }
 }

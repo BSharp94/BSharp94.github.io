@@ -7,15 +7,11 @@ import Projects from '../components/projects/projects'
 import Services from '../components/services/services'
 import ContactMe from '../components/contact_me/contact_me'
 
+import './index.css'
+
 const IndexPage = () => (
   <Layout>
-    <div id = "about-me"
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `0 1.0875rem 1.45rem`,
-      }}
-    >
+    <div id = "about-me" >
 
       <TextTyping text = "Hi. ~~ ~~ ~~ My name is Brian Sharp. ~~ ~~ ~~ :)" />
       <AboutMeSummary />
