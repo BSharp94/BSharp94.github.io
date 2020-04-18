@@ -46,3 +46,13 @@
     margin-top: 1rem;
     padding: 5px 25px;
 }
+
+
+.was-validated .form-control:invalid {
+    border-color: #8E44AD !important;    
+}
+
+.was-validated .invalid-feedback {
+    color: #8E44AD !important;
+}
+
