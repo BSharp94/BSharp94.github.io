@@ -2,6 +2,8 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
+  
+  overflow: hidden;
 }
 body {
   font-family: "Open Sans";
@@ -10,6 +12,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #2C3E50;;
   color: white !important;
+
+  
 }
 article,
 aside,
@@ -675,4 +679,9 @@ pre tt:after {
     top: -410px;
     right: -50vw;
   }
+}
+
+#main-container {
+  max-width: 100%;
+  overflow-x: hidden !important;
 }
