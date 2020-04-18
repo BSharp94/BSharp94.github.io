@@ -2,27 +2,31 @@ import React from "react"
 
 import Layout from "../components/layout"
 import TextTyping from '../components/text_typing/text_typing'
-import Timeline from '../components/timeline/timeline'
 import AboutMeSummary from '../components/about_me_summary/about_me_summary'
-import HorizontalBar from '../components/horizontal_bar/horizontal_bar'
 import Projects from '../components/projects/projects'
+import Services from '../components/services/services'
+import ContactMe from '../components/contact_me/contact_me'
+
+import './index.css'
 
 const IndexPage = () => (
   <Layout>
-    
-    <TextTyping text = "Hi. ~~ ~~ ~~ My name is Brian Sharp. ~~ ~~ ~~ :)" />
-    <HorizontalBar />
-    
-    <AboutMeSummary />
+    <div id = "about-me" >
 
-    <div id = "portfolio" >
+      <TextTyping text = "Hi. ~~ ~~ ~~ My name is Brian Sharp. ~~ ~~ ~~ :)" />
+      <AboutMeSummary />
+      <Services />
+
+    </div>
+
+    <div id = "projects" >
       <Projects />
     </div>
 
-    <div id = "workExperience">
-      <Timeline title = "Work Experience" />
-    </div>
+    <div id = "contact-me" >
+      <ContactMe />
 
+    </div>
 
   </Layout>
 )

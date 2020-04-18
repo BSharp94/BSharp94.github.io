@@ -25,14 +25,12 @@ const Layout = ({ children }) => {
 
   return (
     <div>
+      <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+      <div className = "overlay-layer-1"></div>
+      <div className = "overlay-layer-2"></div>
+      <div className = "overlay-layer-3"></div>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-        >
+      <div>
         <main>{children}</main>
         <footer>
           © {new Date().getFullYear()}, by Brian Sharp

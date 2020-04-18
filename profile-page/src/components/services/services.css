@@ -1,0 +1,37 @@
+.services__panel {
+    margin-bottom: 150px;;
+}
+
+
+@media (max-width : 720px) {
+    .services_card__panel {
+        margin: 30px;
+    }
+}
+
+.service_card__header {
+    background-color: #3498DB;
+    margin-bottom: 0px;
+    padding: 12px 36px;
+    font-size: 22px;
+    font-weight: 550;
+}
+
+.service_card__summary {
+    background-color: #2980B9;
+    padding: 12px 36px 24px 36px;
+}
+
+.service_card__header.green{
+    background-color: #1ABC9C;
+}
+.service_card__header.purple{
+    background-color: #9B59B6;
+}
+
+.service_card__summary.green {
+    background-color: #16A085;
+}
+.service_card__summary.purple {
+    background-color: #8E44AD
+}

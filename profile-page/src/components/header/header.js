@@ -4,19 +4,34 @@ import {
   Nav,
   Navbar,
 } from 'react-bootstrap'
+import {
+  FaGithub,
+  FaLinkedinIn
+} from 'react-icons/fa'
+
 import './header.css'
 
 const Header = ({ siteTitle }) => (
-  <Navbar expand="lg">
+  <Navbar  collapseOnSelect expand="lg" className = "justify-content-between">
+
     <Navbar.Brand href="#home">{siteTitle}</Navbar.Brand>
+    
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
-      <Nav className="mr-auto">
-        <Nav.Link href="#portfolio">Portfolio</Nav.Link>
-        <Nav.Link href="#workExperience">Experience</Nav.Link>
-      </Nav>
+          <Nav className="mr-auto">
+            <Nav.Link href="#projects">Projects</Nav.Link>
+            <Nav.Link href="#contact-me">Contact</Nav.Link>
+          </Nav>
+          <Nav>
+          <Nav.Link href="https://github.com/BSharp94">
+            <FaGithub size = {24}/>
+          </Nav.Link>
+          <Nav.Link eventKey={2} href="https://www.linkedin.com/in/brian-sharp-b79a06a0/">
+            <FaLinkedinIn size = {24}/>
+          </Nav.Link>
+        </Nav>
     </Navbar.Collapse>
-  </Navbar>
+    </Navbar>
 )
 
 Header.propTypes = {
