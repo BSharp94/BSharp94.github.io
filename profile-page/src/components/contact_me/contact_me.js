@@ -2,6 +2,7 @@
 import React from "react"
 import './contact_me.css'
 import {
+    Button,
     Form
 } from 'react-bootstrap'
 
@@ -31,11 +32,17 @@ class ContactMe extends React.Component {
                             <Form.Control type="text" placeholder="Email *" />
                         </Form.Group>
                         
-                        <div className = "col">
+                        <div className = "col-sm-12">
 
                             <Form.Control as="textarea" rows="3" placeholder="Message *" />
                         </div>
                     </div>
+                    <div className = "row justify-content-end">
+                        <Button variant="primary" type="submit" id="contact_me__submit" classname = "contact_me__submit_btn">
+                            Send
+                        </Button>
+                    </div>
+
                 </Form>
             </div>
         </div>
