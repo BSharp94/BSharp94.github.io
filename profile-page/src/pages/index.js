@@ -11,6 +11,8 @@ import './index.css'
 
 const IndexPage = () => (
   <Layout>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <div id = "about-me" >
 
       <TextTyping text = "Hi. ~~ ~~ ~~ My name is Brian Sharp. ~~ ~~ ~~ :)" />
