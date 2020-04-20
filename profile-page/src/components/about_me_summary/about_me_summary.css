@@ -24,7 +24,6 @@
 
 @media (max-width : 720px) {
     .about_me_summary__panel {
-        margin: 0 auto;
-        max-width: 400px;
+        margin: 10px 30px;
     }    
 }

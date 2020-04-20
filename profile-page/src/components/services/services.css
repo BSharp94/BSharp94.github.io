@@ -20,6 +20,7 @@
 .service_card__summary {
     background-color: #2980B9;
     padding: 12px 36px 24px 36px;
+    min-height: 250px;
 }
 
 .service_card__header.green{
