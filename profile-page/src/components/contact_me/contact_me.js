@@ -6,6 +6,7 @@ import {
     Form
 } from 'react-bootstrap'
 
+
 class ContactMe extends React.Component {
 
     constructor(props) {
@@ -23,11 +24,25 @@ class ContactMe extends React.Component {
         event.preventDefault()
 
         if (this.checkValidFormState()) {
-            // submit form
+
+            // send message old school way
+            const Http = new XMLHttpRequest();
+            const URL = "https://us-central1-briansharpdevelopment.cloudfunctions.net/send-contact-email"
+            Http.open("POST", URL)
+            Http.setRequestHeader("Content-Type", "text/plain")  
+            let body = {
+                firstName: this.state.firstName,
+                lastName: this.state.lastName,
+                email: this.state.email,
+                message: this.state.message
+            }
+
+
+            Http.send(JSON.stringify(body))
+
         } else {
             event.target.className += " was-validated";
 
-            // Send Email
         }
     }
 
