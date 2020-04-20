@@ -5,6 +5,9 @@ import {
     Button,
     Form
 } from 'react-bootstrap'
+import {
+    MdSend
+} from 'react-icons/md'
 
 
 class ContactMe extends React.Component {
@@ -16,7 +19,8 @@ class ContactMe extends React.Component {
             firstName: "",
             lastName: "",
             email: "",
-            message: ""
+            message: "",
+            submitted: false
         }
     }
 
@@ -39,6 +43,14 @@ class ContactMe extends React.Component {
 
 
             Http.send(JSON.stringify(body))
+
+            this.setState({
+                firstName: "",
+                lastName: "",
+                email: "",
+                message: "",
+                submitted: true
+            })
 
         } else {
             event.target.className += " was-validated";
@@ -66,11 +78,21 @@ class ContactMe extends React.Component {
     }
 
     render() {
-        return (
-        <div className = "contact_me__panel">
-            <div className = "contact_me__content" >
-                <h3>Contact</h3>
 
+        let contact_form = (
+            <div id = "message_sent_success" className = "row justify-content-md-center">
+                <div className = "col-lg-4 message_sent_success__message">
+                    <span>Thank you! Your message was sent. I will get back to use as soon as I can.</span>
+                </div>
+                
+                <div className = "col-lg-1">
+                    <MdSend size = {32} />
+                </div>
+            </div>
+        )
+
+        if (!this.state.submitted) {
+            contact_form = (
                 <Form onSubmit = {this.submitHandler} noValidate>
                     <div className = "row">
                         <Form.Group controlId="formName" className = "col-sm-4" required>
@@ -105,6 +127,15 @@ class ContactMe extends React.Component {
                     </div>
 
                 </Form>
+            )
+        }
+
+        return (
+        <div className = "contact_me__panel">
+            <div className = "contact_me__content" >
+                <h3>Contact</h3>
+
+                {contact_form}
             </div>
         </div>
         )
