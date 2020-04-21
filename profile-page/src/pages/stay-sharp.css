@@ -1,0 +1,27 @@
+#main-content {
+    margin-top: 126px;;
+    display:grid;
+    grid-template-columns: 200px 600px auto;
+}
+
+#main-content__center {
+    grid-column-start: 2;
+}
+
+.title__content {
+    display: grid;
+    grid-template-columns: 75px auto;
+}
+
+
+.title__text h3 {
+    margin: 0;
+    font-weight: 400;
+}
+
+.content__panel li {
+    list-style: none;
+}
+.content__panel li svg {
+    margin-right: 8px;
+}
