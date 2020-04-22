@@ -50,86 +50,97 @@ function Content() {
                 <li><AiOutlineCodeSandbox color={"#8E44AD"} size = {32}/>Machine Learning</li>
                 <li><AiOutlineCodeSandbox color={"#8E44AD"} size = {32}/>Database Design</li>
             </ul>
-            <p>Weekly emails are normally sent every Thursday morning. Please message me with suggestions for future tips.</p>
+            <p>Weekly emails are normally sent every Thursday morning. Please message me with suggestions for future topics.</p>
         </div>
     )
 }
 
-class SubscribeForm extends React.Component {
-
-    constructor(props) {
-        super()
-
-        this.state = {
-            email: "",
-            submitted: false
-        }
+const SubscribeForm = () => {
+    let iframe_style = {
+        display: "block",
+        margin: "0px auto",
+        maxWidth: "100%"
     }
-
-    submitHandler = event => {
-        event.preventDefault()
-
-        if (this.checkValidEmail(this.state.email)) {
-            // const Http = new XMLHttpRequest();
-            // const URL = ""
-            // Http.open("POST", URL)
-            // Http.setRequestHeader("Content-Type", "text/plain")
-            // let body = {
-            //     email: this.state.email
-            // }
-
-            // Http.send(JSON.stringify(body))
-
-            this.setState({
-                email: "",
-                submitted: true
-            })
-
-        } else {
-            event.target.className += " was-validated"
-        }
-    }
-
-    checkValidEmail(emailStr) {
-        var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-        return emailPattern.test(emailStr); 
-    }
-
-    handleFormUpdate(event) {
-        let updateState = this.state;
-        updateState[event.target.name] = event.target.value
-        this.setState(updateState)
-    }
-
-    render() {
-
-        if (this.state.submitted) {
-            return (
-                <div className = "subscription_submitted__success">
-                    <h3>Subscription Confirmed!</h3>
-                </div>                    
-            )
-        } else {
-            return (
-                <Form className = "row" onSubmit = {this.submitHandler} noValidate>
-                    <div className = "col-sm-10">
-                        <Form.Group controlId="formName">
-                            <Form.Control type="email" placeholder="Email *" id = "txtEmail" name = "email"  value = {this.state.email} onChange = {this.handleFormUpdate.bind(this)} required/>
-                            <div className="invalid-feedback">
-                                Please enter a valid Email
-                            </div>
-                        </Form.Group>   
-                    </div>
-                    <div className = "col-sm-2">
-                        <Button variant="primary" type="submit" id="subscribe_form__btn" >
-                            Subscribe
-                        </Button>
-                    </div>
-                </Form>
-            )
-        }      
-
-    }
+    return(
+        <iframe width="640" height="500" src="https://cb3d8459.sibforms.com/serve/MUIEAGn2G5s309HtcPhYOLyh-qOCiDt-BWxmnx1Xn2SaXAfSQotot_TRwKfcfk2d1AulH-W2dlW6IS-IHfrjyp50qp_GV69YC58hiHfrL0Au0SqP_XWL2oESp07NV-bKrG-IFLtG1CwdkWt1KYhgJEBi-INXV7zszQMhCbH33NXGpx1bE5dr-GAka6QarK4mY3FQ9QKmwx5AE_oF" frameborder="0" scrolling="auto" allowfullscreen></iframe>
+    )
 }
+
+// class SubscribeForm extends React.Component {
+
+//     constructor(props) {
+//         super()
+
+//         this.state = {
+//             email: "",
+//             submitted: false
+//         }
+//     }
+
+//     submitHandler = event => {
+//         event.preventDefault()
+
+//         if (this.checkValidEmail(this.state.email)) {
+//             // const Http = new XMLHttpRequest();
+//             // const URL = ""
+//             // Http.open("POST", URL)
+//             // Http.setRequestHeader("Content-Type", "text/plain")
+//             // let body = {
+//             //     email: this.state.email
+//             // }
+
+//             // Http.send(JSON.stringify(body))
+
+//             this.setState({
+//                 email: "",
+//                 submitted: true
+//             })
+
+//         } else {
+//             event.target.className += " was-validated"
+//         }
+//     }
+
+//     checkValidEmail(emailStr) {
+//         var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+//         return emailPattern.test(emailStr); 
+//     }
+
+//     handleFormUpdate(event) {
+//         let updateState = this.state;
+//         updateState[event.target.name] = event.target.value
+//         this.setState(updateState)
+//     }
+
+//     render() {
+
+//         if (this.state.submitted) {
+//             return (
+//                 <div className = "subscription_submitted__success">
+//                     <h3>Subscription Confirmed!</h3>
+//                 </div>                    
+//             )
+//         } else {
+//             return (
+//                 <Form className = "row" onSubmit = {this.submitHandler} noValidate>
+//                     <div className = "col-sm-10">
+//                         <Form.Group controlId="formName">
+//                             <Form.Control type="email" placeholder="Email *" id = "txtEmail" name = "email"  value = {this.state.email} onChange = {this.handleFormUpdate.bind(this)} required/>
+//                             <div className="invalid-feedback">
+//                                 Please enter a valid Email
+//                             </div>
+//                         </Form.Group>   
+//                     </div>
+//                     <div className = "col-sm-2">
+//                         <Button variant="primary" type="submit" id="subscribe_form__btn" >
+//                             Subscribe
+//                         </Button>
+//                     </div>
+//                 </Form>
+//             )
+//         }      
+
+//     }
+// }
 
 export default StaySharp

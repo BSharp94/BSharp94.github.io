@@ -5,6 +5,20 @@
     
 }
 
+
+@media (max-width : 1000px) {
+    #main-content {
+        grid-template-columns: auto 700px auto;
+    }
+}
+
+@media (max-width : 720px) {
+    #main-content {
+        grid-template-columns: 0px 100% 0px;
+        margin: 96px 16px;
+    }
+}
+
 #main-content__center {
     grid-column-start: 2;
 }
