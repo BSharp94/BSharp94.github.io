@@ -21,7 +21,7 @@ const Header = ({ siteTitle }) => (
           <Nav className="mr-auto">
             <Nav.Link href="/#projects">Projects</Nav.Link>
             <Nav.Link href="/#contact-me">Contact</Nav.Link>
-            <Nav.Link href="/stay-sharp">News Letter</Nav.Link>
+            <Nav.Link href="/stay-sharp">Newsletter</Nav.Link>
           </Nav>
           <Nav>
           <Nav.Link href="https://github.com/BSharp94">
