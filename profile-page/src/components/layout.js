@@ -29,9 +29,9 @@ const Layout = ({ children }) => {
       <div className = "overlay-layer-1"></div>
       <div className = "overlay-layer-2"></div>
       <div className = "overlay-layer-3"></div>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div>
-        <main>{children}</main>
+      <div className = "site">
+        <Header siteTitle={data.site.siteMetadata.title} />
+        <main className = "site-content">{children}</main>
         <footer>
           © {new Date().getFullYear()}, by Brian Sharp
         </footer>

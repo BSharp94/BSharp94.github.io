@@ -1,7 +1,8 @@
 #main-content {
     margin-top: 126px;;
     display:grid;
-    grid-template-columns: 200px 600px auto;
+    grid-template-columns: 200px 700px auto;
+    
 }
 
 #main-content__center {
@@ -24,4 +25,8 @@
 }
 .content__panel li svg {
     margin-right: 8px;
+}
+
+.subscription_submitted__success {
+    color:#8E44AD
 }

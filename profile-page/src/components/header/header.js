@@ -14,13 +14,14 @@ import './header.css'
 const Header = ({ siteTitle }) => (
   <Navbar  collapseOnSelect expand="lg" className = "justify-content-between">
 
-    <Navbar.Brand href="#home">{siteTitle}</Navbar.Brand>
+    <Navbar.Brand href="/">{siteTitle}</Navbar.Brand>
     
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="#projects">Projects</Nav.Link>
-            <Nav.Link href="#contact-me">Contact</Nav.Link>
+            <Nav.Link href="/#projects">Projects</Nav.Link>
+            <Nav.Link href="/#contact-me">Contact</Nav.Link>
+            <Nav.Link href="/stay-sharp">News Letter</Nav.Link>
           </Nav>
           <Nav>
           <Nav.Link href="https://github.com/BSharp94">

@@ -1,13 +1,12 @@
 import React from "react"
-
 import Layout from "../components/layout"
+import { FaRegClock } from "react-icons/fa"
+import { AiOutlineCodeSandbox } from 'react-icons/ai'
+import { MdSend } from 'react-icons/md'
 import {
-    FaRegClock
-} from "react-icons/fa"
-import {
-    AiOutlineCodeSandbox
-} from 'react-icons/ai'
-
+    Button,
+    Form
+} from 'react-bootstrap'
 import './stay-sharp.css'
 
 const StaySharp = () => (
@@ -17,6 +16,7 @@ const StaySharp = () => (
             <Title></Title>
                 
             <Content></Content>
+            <SubscribeForm></SubscribeForm>
         </div>
 
       </div>
@@ -55,8 +55,81 @@ function Content() {
     )
 }
 
-function SubscribeForm() {
+class SubscribeForm extends React.Component {
 
+    constructor(props) {
+        super()
+
+        this.state = {
+            email: "",
+            submitted: false
+        }
+    }
+
+    submitHandler = event => {
+        event.preventDefault()
+
+        if (this.checkValidEmail(this.state.email)) {
+            // const Http = new XMLHttpRequest();
+            // const URL = ""
+            // Http.open("POST", URL)
+            // Http.setRequestHeader("Content-Type", "text/plain")
+            // let body = {
+            //     email: this.state.email
+            // }
+
+            // Http.send(JSON.stringify(body))
+
+            this.setState({
+                email: "",
+                submitted: true
+            })
+
+        } else {
+            event.target.className += " was-validated"
+        }
+    }
+
+    checkValidEmail(emailStr) {
+        var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        return emailPattern.test(emailStr); 
+    }
+
+    handleFormUpdate(event) {
+        let updateState = this.state;
+        updateState[event.target.name] = event.target.value
+        this.setState(updateState)
+    }
+
+    render() {
+
+        if (this.state.submitted) {
+            return (
+                <div className = "subscription_submitted__success">
+                    <h3>Subscription Confirmed!</h3>
+                </div>                    
+            )
+        } else {
+            return (
+                <Form className = "row" onSubmit = {this.submitHandler} noValidate>
+                    <div className = "col-sm-10">
+                        <Form.Group controlId="formName">
+                            <Form.Control type="email" placeholder="Email *" id = "txtEmail" name = "email"  value = {this.state.email} onChange = {this.handleFormUpdate.bind(this)} required/>
+                            <div className="invalid-feedback">
+                                Please enter a valid Email
+                            </div>
+                        </Form.Group>   
+                    </div>
+                    <div className = "col-sm-2">
+                        <Button variant="primary" type="submit" id="subscribe_form__btn" >
+                            Subscribe
+                        </Button>
+                    </div>
+                </Form>
+            )
+        }      
+
+    }
 }
 
 export default StaySharp
