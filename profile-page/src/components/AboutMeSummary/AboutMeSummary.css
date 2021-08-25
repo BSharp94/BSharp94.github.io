@@ -1,0 +1,29 @@
+.about_me_summary__panel {
+
+    font-family: "Open Sans";
+    opacity: 0;
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -o-transition: 3s;
+    transition: 3s;
+    margin-left: 64px;
+    margin-bottom: 100px;
+}
+.show {
+    opacity: 1;
+}
+.about_me_summary__text {
+    margin: 0px 0px;
+}
+.about_me_summary__icon_links a{
+    margin-top: 18px;
+    margin-right: 12px;
+    color: #3498DB;
+} 
+
+
+@media (max-width : 720px) {
+    .about_me_summary__panel {
+        margin: 10px 30px;
+    }    
+}
