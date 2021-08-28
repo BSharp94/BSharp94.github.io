@@ -1,0 +1,54 @@
+
+.resume__panel {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+.resume__title {
+  margin-top: 3rem;
+}
+
+.resume__actions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.resume__actions button {
+  border: none;
+  color: white;
+  background-color: #2980B9;
+  padding: 0.4rem 0.6rem;
+}
+
+.resume__contact {
+  display: flex;
+}
+.resume__contact .resume__column {
+  flex: 1;
+}
+.resume__contact .resume__column div{
+  margin: 0.5rem;
+}
+.resume__summary {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+
+}
+.resume__experience_item {
+  margin-left: 1rem;
+}
+.resume__experience_item .resume__experience_title,
+.resume__education_title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.resume__experience_item .resume__experience_detail_list,
+.resume__education_detail_list {
+  margin-top: 1.5rem;
+}
+.resume__experience_item .resume__experience_detail_list li, 
+.resume__education_detail_list li{
+  margin: 0;
+}

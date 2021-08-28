@@ -12,7 +12,7 @@ const Services = () => (
       color="blue" />
     <ServicesCard
       title="Data Visualization"
-      summary={"I help to produce stunning data visualizations that provide useful insights to users. I use modern frontend framworks to develop fast and responsive dashboards."}
+      summary={"I help to produce stunning data visualizations that provide useful insights to users. I use modern frontend frameworks to develop fast and responsive dashboards."}
       color="green" />
     <ServicesCard
       title="Machine Learning"

@@ -4,6 +4,7 @@ import TextTyping from '../components/TextTyping/TextTyping.component';
 import AboutMeSummary from '../components/AboutMeSummary/AboutMeSummary.component';
 import Projects from '../components/Projects/Projects.component';
 import Services from '../components/Services/Services.component';
+import Resume from '../components/Resume/Resume.component';
 
 import './index.css';
 
@@ -21,7 +22,12 @@ const IndexPage = () => (
     <div id="projects" >
       <Projects />
     </div>
-  </Layout>
-)
 
-export default IndexPage
+    <div id="resume">
+      <Resume />
+    </div>
+  </Layout>
+);
+
+export default IndexPage;
+

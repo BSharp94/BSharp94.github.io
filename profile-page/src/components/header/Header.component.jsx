@@ -18,6 +18,7 @@ const Header = ({ siteTitle }) => (
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mr-auto">
         <Nav.Link href="/#projects">Projects</Nav.Link>
+        <Nav.Link href="/#resume">Resume</Nav.Link>
       </Nav>
       <Nav>
         <Nav.Link href="https://github.com/BSharp94">
