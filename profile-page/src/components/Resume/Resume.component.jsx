@@ -58,7 +58,7 @@ const Resume = () => {
               <div className="resume__experience_item">
                 <div className="resume__experience_title">
                   <b>Full Stack Developer</b>
-                  <b>August 2021 to Present</b>
+                  <b>August 2020 to Present</b>
                 </div>
                 <div className="resume__experience_company">
                   <span>Adrizer, Sarasota, Fl</span>
