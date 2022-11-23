@@ -1,0 +1,42 @@
+body {
+    font-family: "Baskerville Old Face";
+    
+    font-style: italic;
+    font-variant: normal;
+}
+
+
+/* Navigation */
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: center;
+}
+
+.navigation-logo {
+    border-left: 2px solid black;
+    padding-left: 0.5rem;
+    font-weight: 800;
+    font-size: 34px;
+    line-height: 37.4px;
+    flex:1;
+    margin-left: 1rem;
+    margin-top: 1.7rem;
+}
+
+.navigation-links ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-right: 2rem;
+    display: flex;
+}
+
+.navigation-links ul li{
+    margin-left: 3rem;
+    margin-top: 2rem;
+    font-weight: 100;
+    font-size: 24px;
+}
