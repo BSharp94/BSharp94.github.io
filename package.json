@@ -11,5 +11,9 @@
     "fs": "^0.0.1-security",
     "markdown-it": "^13.0.1",
     "markdown-it-attrs": "^4.1.4"
+  },
+  "scripts": {
+    "build": "env NODE_ENV=production npx eleventy",
+    "serve": "npx eleventy --serve"
   }
 }
